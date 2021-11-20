@@ -29,10 +29,26 @@ public class LadyBugsAccountDisplayedMyAccountpage {
     public void displayedLinkOrderHistoryAndDetails() {
         fFox.navigate().to("http://czechitas-datestovani-hackathon.cz/en/my-account");
         MetodySpolecne.klikNaTlacitkoDleTextu(fFox, "Order history and details");
-
-        Assertions.assertEquals("ORDER HISTORY AND DETAILS", fFox.findElement(By.xpath("//span[text()='Order history and details']")).getText(), "Porovnavane texty nejsou stejne.");
+         Assertions.assertEquals("ORDER HISTORY", fFox.findElement(By.xpath("//h1")).getText(), "Nadpis stránky neodpovídá očekávanému.");
     }
-
+    @Test
+    public void displayedLinkMyCreditSlips() {
+        fFox.navigate().to("http://czechitas-datestovani-hackathon.cz/en/my-account");
+        MetodySpolecne.klikNaTlacitkoDleTextu(fFox, "My credit slips");
+        Assertions.assertEquals("CREDIT SLIPS", fFox.findElement(By.xpath("//h1")).getText(), "Nadpis stránky neodpovídá očekávanému.");
+    }
+    @Test
+    public void displayedLinkMyAddresses() {
+        fFox.navigate().to("http://czechitas-datestovani-hackathon.cz/en/my-account");
+        MetodySpolecne.klikNaTlacitkoDleTextu(fFox, "My addresses");
+        Assertions.assertEquals("MY ADDRESSES", fFox.findElement(By.xpath("//h1")).getText(), "Nadpis stránky neodpovídá očekávanému.");
+    }
+    @Test
+    public void displayedLinkMyPersonalInformation() {
+        fFox.navigate().to("http://czechitas-datestovani-hackathon.cz/en/my-account");
+        MetodySpolecne.klikNaTlacitkoDleTextu(fFox, "My personal information");
+        Assertions.assertEquals("YOUR PERSONAL INFORMATION", fFox.findElement(By.xpath("//h1")).getText(), "Nadpis stránky neodpovídá očekávanému.");
+    }
 
     @AfterEach
     public void tearDown() {
