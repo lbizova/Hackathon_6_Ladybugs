@@ -6,11 +6,11 @@
         <sourceOutputDir name="target/generated-sources/annotations" />
         <sourceTestOutputDir name="target/generated-test-sources/test-annotations" />
         <outputRelativeToContentRoot value="true" />
-        <module name="DU_LB" />
+        <module name="Hack_LB" />
       </profile>
     </annotationProcessing>
     <bytecodeTargetLevel>
-      <module name="DU_LB" target="11" />
+      <module name="Hack_LB" target="11" />
     </bytecodeTargetLevel>
   </component>
 </project>
